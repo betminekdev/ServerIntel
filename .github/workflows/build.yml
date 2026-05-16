@@ -1,3 +1,4 @@
+# SmartAdmin continuous integration build.
 name: Build
 
 on:

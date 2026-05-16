@@ -1,3 +1,4 @@
+// SmartAdmin Gradle settings.
 pluginManagement {
     repositories {
         gradlePluginPortal()

@@ -1,3 +1,4 @@
+# SmartAdmin Bukkit/Paper plugin descriptor.
 name: SmartAdmin
 version: 0.1.0-beta
 main: cz.betminekdev.smartadmin.SmartAdminPlugin
