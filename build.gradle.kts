@@ -1,4 +1,3 @@
-// SmartAdmin build configuration.
 plugins {
     java
 }

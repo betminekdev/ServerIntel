@@ -20,7 +20,6 @@ import java.io.File;
 import java.sql.SQLException;
 import java.util.Locale;
 
-// Main Bukkit/Paper entrypoint for SmartAdmin.
 public final class SmartAdminPlugin extends JavaPlugin {
     private SmartAdminConfig smartAdminConfig;
     private StorageService storageService;
