@@ -1,5 +1,5 @@
 messages:
-  prefix: "&8[&bSmartAdmin&8]&r "
+  prefix: "&8[&bSmartAdmin&8]&r"
 
 risk:
   max-score: 100

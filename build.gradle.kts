@@ -6,7 +6,9 @@ group = "cz.betminekdev"
 version = "0.1.0-beta"
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 tasks.withType<JavaCompile>().configureEach {
@@ -21,6 +23,7 @@ dependencies {
 val smartAdminSelfTest by tasks.registering(JavaExec::class) {
     group = "verification"
     description = "Runs lightweight SmartAdmin logic self-tests."
+
     val testSourceSet = sourceSets.test.get()
     classpath = testSourceSet.runtimeClasspath
     mainClass.set("cz.betminekdev.smartadmin.SelfTest")

@@ -28,5 +28,5 @@ permissions:
     description: Can receive SmartAdmin staff alerts.
     default: op
   smartadmin.bypass:
-    description: Excludes a player from risk scoring unless config says otherwise.
+    description: Excludes a player from risk scoring unless configured otherwise.
     default: false
