@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SmartAdmin logo</title>
+  <desc id="desc">A hexagonal shield with a checkmark and signal nodes.</desc>
+  <rect width="512" height="512" rx="96" fill="#07111F"/>
+  <path d="M256 62l160 92v184l-160 92-160-92V154L256 62z" fill="#0B2238" stroke="#38BDF8" stroke-width="18"/>
+  <circle cx="180" cy="172" r="18" fill="#86EFAC"/>
+  <circle cx="333" cy="180" r="18" fill="#FBBF24"/>
+  <circle cx="346" cy="328" r="18" fill="#FB7185"/>
+  <path d="M180 172l76 88 77-80M256 260l90 68" stroke="#1D4ED8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160 268l60 60 132-156" stroke="#E5F3FF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

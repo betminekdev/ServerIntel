@@ -1,5 +1,5 @@
 messages:
-  prefix: "&8[&bServerIntel&8]&r "
+  prefix: "&8[&bSmartAdmin&8]&r "
 
 risk:
   max-score: 100
@@ -52,7 +52,7 @@ alerts:
 
 storage:
   type: sqlite
-  database-file: "plugins/ServerIntel/serverintel.db"
+  database-file: "plugins/SmartAdmin/smartadmin.db"
   keep-data-days: 14
 
 watch:

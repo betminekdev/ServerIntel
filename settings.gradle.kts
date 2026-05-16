@@ -16,4 +16,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ServerIntel"
+rootProject.name = "SmartAdmin"

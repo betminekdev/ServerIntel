@@ -1,8 +1,8 @@
 # Configuration
 
-ServerIntel creates `plugins/ServerIntel/config.yml` on first startup.
+SmartAdmin creates `plugins/SmartAdmin/config.yml` on first startup.
 
-After editing the config, run `/si reload`. Restart the server after changing storage paths.
+After editing the config, run `/sa reload`. Restart the server after changing storage paths.
 
 ## Messages
 
@@ -23,7 +23,7 @@ risk:
 - `decay-enabled`: whether risk lowers over time.
 - `decay-amount`: how much risk is removed each interval.
 - `decay-interval-minutes`: how often decay runs.
-- `score-bypassed-players`: whether `serverintel.bypass` players can still gain risk.
+- `score-bypassed-players`: whether `smartadmin.bypass` players can still gain risk.
 
 ## Mining
 
@@ -56,7 +56,7 @@ alerts:
 ```yaml
 storage:
   type: sqlite
-  database-file: "plugins/ServerIntel/serverintel.db"
+  database-file: "plugins/SmartAdmin/smartadmin.db"
   keep-data-days: 14
 ```
 

@@ -1,12 +1,12 @@
 # FAQ
 
-## Is ServerIntel an anti-cheat?
+## Is SmartAdmin an anti-cheat?
 
-No. ServerIntel is a smart staff assistant. It provides investigation signals and timelines for staff review.
+No. SmartAdmin is a smart staff assistant. It provides investigation signals and timelines for staff review.
 
-## Does ServerIntel auto-ban players?
+## Does SmartAdmin auto-ban players?
 
-No. ServerIntel does not auto-ban in v0.1 and does not recommend punishing without review.
+No. SmartAdmin does not auto-ban in v0.1 and does not recommend punishing without review.
 
 ## Can it detect xray perfectly?
 
@@ -14,19 +14,19 @@ No. The mining detector is a configurable heuristic. It can highlight suspicious
 
 ## Does the player need a client mod?
 
-No. ServerIntel uses server-side data only.
+No. SmartAdmin uses server-side data only.
 
 ## Which server software is supported?
 
-ServerIntel is built for Paper/Spigot-style Java servers and compiles against Paper API `1.21.11-R0.1-SNAPSHOT`.
+SmartAdmin is built for Paper/Spigot-style Java servers and compiles against Paper API `1.21.11-R0.1-SNAPSHOT`.
 
 ## What database does it use?
 
-SQLite. The default file is `plugins/ServerIntel/serverintel.db`.
+SQLite. The default file is `plugins/SmartAdmin/smartadmin.db`.
 
 ## Which command should staff use?
 
-Use `/si`. The full command is `/serverintel`, and legacy-friendly aliases `/smartadmin` and `/sa` are also registered.
+Use `/sa`. The full command is `/smartadmin`, and legacy-friendly aliases `/sa` and `/si` are also registered.
 
 ## Is v0.1.0-beta production ready?
 

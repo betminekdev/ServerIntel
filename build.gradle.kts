@@ -18,19 +18,19 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
 }
 
-val serverIntelSelfTest by tasks.registering(JavaExec::class) {
+val smartAdminSelfTest by tasks.registering(JavaExec::class) {
     group = "verification"
-    description = "Runs lightweight ServerIntel logic self-tests."
+    description = "Runs lightweight SmartAdmin logic self-tests."
     val testSourceSet = sourceSets.test.get()
     classpath = testSourceSet.runtimeClasspath
-    mainClass.set("cz.betminekdev.serverintel.SelfTest")
+    mainClass.set("cz.betminekdev.smartadmin.SelfTest")
 }
 
 tasks.jar {
-    archiveBaseName.set("ServerIntel")
+    archiveBaseName.set("SmartAdmin")
 }
 
 tasks.test {
-    dependsOn(serverIntelSelfTest)
+    dependsOn(smartAdminSelfTest)
     exclude("**/*")
 }

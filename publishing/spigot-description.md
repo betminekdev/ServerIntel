@@ -1,9 +1,9 @@
-[CENTER][B]ServerIntel[/B][/CENTER]
+[CENTER][B]SmartAdmin[/B][/CENTER]
 [CENTER]Smart staff assistant for Minecraft servers.[/CENTER]
 
 [B]Stop guessing. Start investigating.[/B]
 
-ServerIntel helps staff teams investigate suspicious player behavior using risk scores, player timelines, staff alerts, and watch mode.
+SmartAdmin helps staff teams investigate suspicious player behavior using risk scores, player timelines, staff alerts, and watch mode.
 
 This plugin is [B]not[/B] a classic anti-cheat. It does not auto-ban players and it does not claim perfect cheat detection. It provides server-side signals and evidence timelines so staff can review behavior faster.
 
@@ -21,18 +21,18 @@ This plugin is [B]not[/B] a classic anti-cheat. It does not auto-ban players and
 
 [B]Commands[/B]
 [LIST]
-[*]/si help
-[*]/si profile <player>
-[*]/si timeline <player>
-[*]/si watch <player>
-[*]/si alerts
-[*]/si reload
-[*]/si version
+[*]/sa help
+[*]/sa profile <player>
+[*]/sa timeline <player>
+[*]/sa watch <player>
+[*]/sa alerts
+[*]/sa reload
+[*]/sa version
 [/LIST]
 
 [B]Beta Warning[/B]
 
-ServerIntel v0.1.0-beta is an early public beta. Test it on a staging server first and tune the configuration for your community.
+SmartAdmin v0.1.0-beta is an early public beta. Test it on a staging server first and tune the configuration for your community.
 
 [B]Important[/B]
 
@@ -40,7 +40,7 @@ Risk scores are investigation signals, not proof. Staff should always review con
 
 [B]Links[/B]
 [LIST]
-[*]GitHub: https://github.com/betminekdev/ServerIntel
+[*]GitHub: https://github.com/betminekdev/SmartAdmin
 [*]Modrinth: coming soon
 [*]Hangar: coming soon
 [/LIST]

@@ -1,8 +1,8 @@
-# ServerIntel v0.1.0-beta
+# SmartAdmin v0.1.0-beta
 
-ServerIntel is a smart staff assistant for Minecraft servers.
+SmartAdmin is a smart staff assistant for Minecraft servers.
 
-It is not a classic anti-cheat. It does not auto-ban players and does not claim perfect cheat detection. ServerIntel collects server-side signals, creates player timelines, calculates risk scores, and helps staff investigate suspicious behavior faster.
+It is not a classic anti-cheat. It does not auto-ban players and does not claim perfect cheat detection. SmartAdmin collects server-side signals, creates player timelines, calculates risk scores, and helps staff investigate suspicious behavior faster.
 
 ## What Is Included
 
@@ -14,16 +14,16 @@ It is not a classic anti-cheat. It does not auto-ban players and does not claim 
 - In-memory watch mode.
 - SQLite storage.
 - Configurable thresholds and risk decay.
-- Commands under `/serverintel`, with `/si`, `/smartadmin`, and `/sa` aliases.
+- Commands under `/smartadmin`, with `/sa` and `/si` aliases.
 
 ## Installation
 
-1. Download `ServerIntel-0.1.0-beta.jar`.
+1. Download `SmartAdmin-0.1.0-beta.jar`.
 2. Put it in your server `plugins` folder.
 3. Start your Paper/Spigot server.
-4. Confirm `plugins/ServerIntel/config.yml` was created.
+4. Confirm `plugins/SmartAdmin/config.yml` was created.
 5. Tune thresholds for your server.
-6. Use `/si help` in-game.
+6. Use `/sa help` in-game.
 
 ## Beta Warning
 

@@ -1,10 +1,10 @@
-# ServerIntel
+# SmartAdmin
 
 **Smart staff assistant for Minecraft servers.**
 
-ServerIntel helps staff teams investigate suspicious player behavior using risk scores, player timelines, staff alerts, and watch mode.
+SmartAdmin helps staff teams investigate suspicious player behavior using risk scores, player timelines, staff alerts, and watch mode.
 
-It is not a classic anti-cheat. It does not auto-ban players and does not claim perfect cheat detection. ServerIntel is built to provide useful server-side signals so staff can review behavior faster and make better moderation decisions.
+It is not a classic anti-cheat. It does not auto-ban players and does not claim perfect cheat detection. SmartAdmin is built to provide useful server-side signals so staff can review behavior faster and make better moderation decisions.
 
 ## Features
 
@@ -19,18 +19,18 @@ It is not a classic anti-cheat. It does not auto-ban players and does not claim 
 
 ## Commands
 
-Preferred command: `/si`
+Preferred command: `/sa`
 
-Main command: `/serverintel`
+Main command: `/smartadmin`
 
-Aliases: `/si`, `/smartadmin`, `/sa`
+Aliases: `/sa`, `/si`
 
 ## Beta Notice
 
-ServerIntel `v0.1.0-beta` is an early public beta. Test it before live use and tune thresholds for your server.
+SmartAdmin `v0.1.0-beta` is an early public beta. Test it before live use and tune thresholds for your server.
 
 ## Links
 
-- GitHub: https://github.com/betminekdev/ServerIntel
+- GitHub: https://github.com/betminekdev/SmartAdmin
 - Hangar: _coming soon_
 - SpigotMC: _coming soon_

@@ -1,24 +1,24 @@
 # Release Checklist
 
-Use this checklist before publishing a ServerIntel beta build.
+Use this checklist before publishing a SmartAdmin beta build.
 
 ## Build
 
 - Run `.\gradlew.bat clean build --console plain` on Windows.
-- Confirm `build/libs/ServerIntel-0.1.0-beta.jar` exists.
+- Confirm `build/libs/SmartAdmin-0.1.0-beta.jar` exists.
 - Confirm GitHub Actions passes on `main`.
 
 ## Manual Server Test
 
 - Start a Paper/Spigot test server with the JAR installed.
-- Confirm `plugins/ServerIntel/config.yml` is created.
-- Confirm `plugins/ServerIntel/serverintel.db` is created.
+- Confirm `plugins/SmartAdmin/config.yml` is created.
+- Confirm `plugins/SmartAdmin/smartadmin.db` is created.
 - Join with a player.
-- Run `/serverintel help`, `/si help`, `/smartadmin help`, and `/sa help`.
-- Mine valuable ores and verify `/si profile <player>` and `/si timeline <player>`.
-- Toggle `/si alerts`.
-- Toggle `/si watch <player>`.
-- Test `/si reload`.
+- Run `/smartadmin help`, `/sa help`, and `/si help`.
+- Mine valuable ores and verify `/sa profile <player>` and `/sa timeline <player>`.
+- Toggle `/sa alerts`.
+- Toggle `/sa watch <player>`.
+- Test `/sa reload`.
 
 ## Public Release
 
@@ -31,6 +31,6 @@ Use this checklist before publishing a ServerIntel beta build.
 ## Messaging Review
 
 - Do not claim perfect cheat detection.
-- Do not call ServerIntel an auto-ban anti-cheat.
+- Do not call SmartAdmin an auto-ban anti-cheat.
 - Keep the beta warning visible.
 - Present all suspicious behavior as signals for manual review.

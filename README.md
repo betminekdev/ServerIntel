@@ -1,8 +1,8 @@
-![ServerIntel banner](assets/banner.svg)
+![SmartAdmin banner](assets/banner.svg)
 
-# ServerIntel
+# SmartAdmin
 
-[![Build](https://github.com/betminekdev/ServerIntel/actions/workflows/build.yml/badge.svg)](https://github.com/betminekdev/ServerIntel/actions/workflows/build.yml)
+[![Build](https://github.com/betminekdev/SmartAdmin/actions/workflows/build.yml/badge.svg)](https://github.com/betminekdev/SmartAdmin/actions/workflows/build.yml)
 ![Java 21](https://img.shields.io/badge/Java-21-blue)
 ![Paper/Spigot](https://img.shields.io/badge/Paper%2FSpigot-1.21.x-38bdf8)
 ![Version](https://img.shields.io/badge/version-0.1.0--beta-f59e0b)
@@ -12,11 +12,11 @@ Smart staff assistant for Minecraft servers.
 
 **Stop guessing. Start investigating.**
 
-ServerIntel helps staff teams understand suspicious player behavior using risk scores, player timelines, smart alerts, and investigation-focused data.
+SmartAdmin helps staff teams understand suspicious player behavior using risk scores, player timelines, smart alerts, and investigation-focused data.
 
-> **Beta warning:** ServerIntel `v0.1.0-beta` is an early public beta. Test it on a staging server first and tune thresholds for your community.
+> **Beta warning:** SmartAdmin `v0.1.0-beta` is an early public beta. Test it on a staging server first and tune thresholds for your community.
 
-ServerIntel is not a classic anti-cheat and does not replace human moderation. It provides server-side signals and evidence timelines to help staff make better decisions. It does not auto-ban players and it does not claim guaranteed cheat detection.
+SmartAdmin is not a classic anti-cheat and does not replace human moderation. It provides server-side signals and evidence timelines to help staff make better decisions. It does not auto-ban players and it does not claim guaranteed cheat detection.
 
 ## Features
 
@@ -43,28 +43,28 @@ ServerIntel is not a classic anti-cheat and does not replace human moderation. I
 
 ## Installation
 
-1. Download `ServerIntel-0.1.0-beta.jar` from the GitHub release.
+1. Download `SmartAdmin-0.1.0-beta.jar` from the GitHub release.
 2. Put the JAR into your server `plugins` folder.
 3. Start the server.
-4. Edit `plugins/ServerIntel/config.yml` if needed.
-5. Run `/si reload` after configuration changes.
+4. Edit `plugins/SmartAdmin/config.yml` if needed.
+5. Run `/sa reload` after configuration changes.
 
 ## Commands
 
-Main command: `/serverintel`  
-Preferred command: `/si`  
-Aliases: `/si`, `/smartadmin`, `/sa`
+Main command: `/smartadmin`  
+Preferred command: `/sa`  
+Aliases: `/sa`, `/si`
 
 | Command | Description |
 | --- | --- |
-| `/si help` | Shows ServerIntel commands. |
-| `/si profile <player>` | Shows player risk score, status, and recent signals. |
-| `/si timeline <player>` | Shows recent important actions. |
-| `/si watch <player>` | Toggles live watch mode for the sender. |
-| `/si alerts` | Toggles personal staff alerts. |
-| `/si reload` | Reloads configuration. |
-| `/si version` | Shows plugin version. |
-| `/si evidence <player>` | Prepared placeholder for future investigation summaries. |
+| `/sa help` | Shows SmartAdmin commands. |
+| `/sa profile <player>` | Shows player risk score, status, and recent signals. |
+| `/sa timeline <player>` | Shows recent important actions. |
+| `/sa watch <player>` | Toggles live watch mode for the sender. |
+| `/sa alerts` | Toggles personal staff alerts. |
+| `/sa reload` | Reloads configuration. |
+| `/sa version` | Shows plugin version. |
+| `/sa evidence <player>` | Prepared placeholder for future investigation summaries. |
 
 More detail: [docs/commands.md](docs/commands.md)
 
@@ -72,11 +72,11 @@ More detail: [docs/commands.md](docs/commands.md)
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `serverintel.admin` | Full access. | op |
-| `serverintel.staff` | Can use profile, timeline, watch, and alerts. | op |
-| `serverintel.reload` | Can reload config. | op |
-| `serverintel.alerts` | Can receive staff alerts. | op |
-| `serverintel.bypass` | Excludes a player from risk scoring unless configured otherwise. | false |
+| `smartadmin.admin` | Full access. | op |
+| `smartadmin.staff` | Can use profile, timeline, watch, and alerts. | op |
+| `smartadmin.reload` | Can reload config. | op |
+| `smartadmin.alerts` | Can receive staff alerts. | op |
+| `smartadmin.bypass` | Excludes a player from risk scoring unless configured otherwise. | false |
 
 More detail: [docs/permissions.md](docs/permissions.md)
 
@@ -125,9 +125,9 @@ More detail: [docs/configuration.md](docs/configuration.md)
 ## Example Alert
 
 ```text
-[ServerIntel] PlayerName reached Risk 64/100.
+[SmartAdmin] PlayerName reached Risk 64/100.
 Reason: High-value ore burst detected.
-Actions: /si profile PlayerName | /si timeline PlayerName | /si watch PlayerName
+Actions: /sa profile PlayerName | /sa timeline PlayerName | /sa watch PlayerName
 ```
 
 ## Example Timeline
@@ -141,10 +141,10 @@ Actions: /si profile PlayerName | /si timeline PlayerName | /si watch PlayerName
 
 ## Limitations
 
-- ServerIntel does not detect cheat clients.
-- ServerIntel does not provide 100% xray detection.
-- ServerIntel does not inspect screenshots or client-side state.
-- ServerIntel does not auto-punish players.
+- SmartAdmin does not detect cheat clients.
+- SmartAdmin does not provide 100% xray detection.
+- SmartAdmin does not inspect screenshots or client-side state.
+- SmartAdmin does not auto-punish players.
 - Risk scores are investigation signals, not proof.
 - Watch mode is in-memory and resets on restart.
 - SQLite writes are simple and synchronous in v0.1.
@@ -160,7 +160,7 @@ More detail: [docs/detection.md](docs/detection.md)
 The JAR is created at:
 
 ```text
-build/libs/ServerIntel-0.1.0-beta.jar
+build/libs/SmartAdmin-0.1.0-beta.jar
 ```
 
 ## Roadmap
@@ -180,7 +180,7 @@ build/libs/ServerIntel-0.1.0-beta.jar
 
 ## Links
 
-- GitHub: https://github.com/betminekdev/ServerIntel
+- GitHub: https://github.com/betminekdev/SmartAdmin
 - Modrinth: _coming soon_
 - Hangar: _coming soon_
 - SpigotMC: _coming soon_

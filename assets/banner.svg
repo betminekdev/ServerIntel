@@ -1,12 +1,12 @@
 <svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">ServerIntel banner</title>
-  <desc id="desc">A clean ServerIntel release banner with investigation panels and risk signals.</desc>
+  <title id="title">SmartAdmin banner</title>
+  <desc id="desc">A clean SmartAdmin release banner with investigation panels and risk signals.</desc>
   <rect width="1280" height="420" fill="#07111F"/>
   <rect x="38" y="38" width="1204" height="344" rx="22" fill="#0C1728" stroke="#1D3554" stroke-width="2"/>
   <circle cx="112" cy="112" r="48" fill="#0EA5E9" opacity="0.18"/>
   <path d="M112 70l41 24v47l-41 24-41-24V94l41-24z" fill="#0B2238" stroke="#38BDF8" stroke-width="4"/>
   <path d="M94 115l14 14 28-35" stroke="#A7F3D0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="192" y="133" fill="#E5F3FF" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="700">ServerIntel</text>
+  <text x="192" y="133" fill="#E5F3FF" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="700">SmartAdmin</text>
   <text x="195" y="178" fill="#8DB5D7" font-family="Segoe UI, Arial, sans-serif" font-size="25">Smart staff assistant for Minecraft servers</text>
   <text x="195" y="220" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">Stop guessing. Start investigating.</text>
   <rect x="195" y="255" width="174" height="42" rx="8" fill="#123659" stroke="#2563EB"/>

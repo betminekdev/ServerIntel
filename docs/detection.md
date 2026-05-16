@@ -1,10 +1,10 @@
 # Detection Philosophy
 
-ServerIntel is a staff assistant, not an anti-cheat.
+SmartAdmin is a staff assistant, not an anti-cheat.
 
 It collects server-side signals, creates timelines, calculates risk scores, and alerts staff when behavior deserves manual review.
 
-## What ServerIntel Does
+## What SmartAdmin Does
 
 - Tracks important player actions.
 - Adds risk points for configured signals.
@@ -12,7 +12,7 @@ It collects server-side signals, creates timelines, calculates risk scores, and 
 - Alerts staff when risk passes configured thresholds.
 - Helps staff decide what to review next.
 
-## What ServerIntel Does Not Do
+## What SmartAdmin Does Not Do
 
 - It does not guarantee cheat detection.
 - It does not detect client-side cheat mods.
