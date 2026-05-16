@@ -1,0 +1,14 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ServerIntel alert preview</title>
+  <desc id="desc">A preview of a staff alert message.</desc>
+  <rect width="900" height="520" rx="22" fill="#07111F"/>
+  <rect x="92" y="124" width="716" height="272" rx="16" fill="#0C1728" stroke="#FB7185" stroke-width="2"/>
+  <rect x="132" y="164" width="104" height="104" rx="18" fill="#3A1420"/>
+  <path d="M184 188l42 72h-84l42-72z" fill="#FB7185"/>
+  <rect x="179" y="214" width="10" height="28" rx="5" fill="#07111F"/>
+  <circle cx="184" cy="251" r="5" fill="#07111F"/>
+  <text x="268" y="184" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">[ServerIntel]</text>
+  <text x="268" y="226" fill="#E5F3FF" font-family="Segoe UI, Arial, sans-serif" font-size="25">PlayerName reached Risk 64/100.</text>
+  <text x="268" y="274" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="21">Reason: High-value ore burst detected.</text>
+  <text x="268" y="326" fill="#8DB5D7" font-family="Segoe UI, Arial, sans-serif" font-size="19">Actions: /si profile PlayerName | /si timeline PlayerName | /si watch PlayerName</text>
+</svg>

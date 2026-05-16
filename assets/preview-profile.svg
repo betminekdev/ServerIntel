@@ -1,0 +1,17 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ServerIntel profile preview</title>
+  <desc id="desc">A preview of a player profile risk panel.</desc>
+  <rect width="900" height="520" rx="22" fill="#07111F"/>
+  <rect x="42" y="42" width="816" height="436" rx="16" fill="#0C1728" stroke="#1D3554" stroke-width="2"/>
+  <text x="78" y="106" fill="#38BDF8" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">ServerIntel Profile: PlayerName</text>
+  <text x="78" y="162" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="24">Risk Score:</text>
+  <text x="230" y="162" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">68/100</text>
+  <text x="78" y="210" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="24">Status:</text>
+  <text x="170" y="210" fill="#FBBF24" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">SUSPICIOUS</text>
+  <rect x="78" y="252" width="690" height="20" rx="8" fill="#14253A"/>
+  <rect x="78" y="252" width="469" height="20" rx="8" fill="#FBBF24"/>
+  <text x="78" y="330" fill="#E5F3FF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">Important signals</text>
+  <text x="102" y="374" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="20">- 11 diamond ores in 10 minutes</text>
+  <text x="102" y="410" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="20">- New player mining activity</text>
+  <text x="102" y="446" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="20">Recommended action: Watch manually.</text>
+</svg>

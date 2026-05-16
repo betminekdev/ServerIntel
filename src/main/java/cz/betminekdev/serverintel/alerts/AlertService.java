@@ -48,7 +48,7 @@ public final class AlertService {
             }
             MessageUtil.send(staff, current.prefix(), color + target.getName() + " &7reached Risk " + color + newScore + "/" + current.maxScore() + "&7.");
             MessageUtil.send(staff, "", "&7Reason: &f" + reason);
-            MessageUtil.send(staff, "", "&7Actions: &b/sa profile " + target.getName() + " &8| &b/sa timeline " + target.getName() + " &8| &b/sa watch " + target.getName());
+            MessageUtil.send(staff, "", "&7Actions: &b/si profile " + target.getName() + " &8| &b/si timeline " + target.getName() + " &8| &b/si watch " + target.getName());
         }
     }
 

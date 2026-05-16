@@ -57,7 +57,7 @@ public final class ServerIntelPlugin extends JavaPlugin {
         registerCommands();
         restartDecayTask();
 
-        getLogger().info("ServerIntel " + getDescription().getVersion() + " enabled. Command root: /smartadmin and /sa.");
+        getLogger().info("ServerIntel " + getDescription().getVersion() + " enabled. Command root: /serverintel and /si.");
     }
 
     @Override
@@ -102,9 +102,9 @@ public final class ServerIntelPlugin extends JavaPlugin {
     }
 
     private void registerCommands() {
-        PluginCommand command = getCommand("smartadmin");
+        PluginCommand command = getCommand("serverintel");
         if (command == null) {
-            getLogger().severe("Command smartadmin is missing from plugin.yml.");
+            getLogger().severe("Command serverintel is missing from plugin.yml.");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }

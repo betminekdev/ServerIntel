@@ -10,3 +10,5 @@
 - Added watch mode.
 - Added SQLite storage.
 - Added configurable thresholds.
+- Added `/serverintel` command with `/si`, `/smartadmin`, and `/sa` aliases.
+- Added public beta documentation, release notes, marketplace descriptions, SVG assets, and GitHub Actions build workflow.

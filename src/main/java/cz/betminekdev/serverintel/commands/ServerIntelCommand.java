@@ -61,7 +61,7 @@ public final class ServerIntelCommand implements CommandExecutor, TabCompleter {
             case "version" -> version(sender);
             case "evidence" -> evidence(sender, args);
             default -> {
-                MessageUtil.send(sender, config.get().prefix(), "&cUnknown command. Use &f/sa help&c.");
+                MessageUtil.send(sender, config.get().prefix(), "&cUnknown command. Use &f/si help&c.");
                 yield true;
             }
         };
@@ -73,13 +73,13 @@ public final class ServerIntelCommand implements CommandExecutor, TabCompleter {
             return true;
         }
         MessageUtil.send(sender, config.get().prefix(), "&bServerIntel commands");
-        sender.sendMessage(MessageUtil.color("&8- &b/sa profile <player> &7View risk score and recent signals."));
-        sender.sendMessage(MessageUtil.color("&8- &b/sa timeline <player> &7View recent investigation timeline."));
-        sender.sendMessage(MessageUtil.color("&8- &b/sa watch <player> &7Toggle live watch mode."));
-        sender.sendMessage(MessageUtil.color("&8- &b/sa alerts &7Toggle personal staff alerts."));
-        sender.sendMessage(MessageUtil.color("&8- &b/sa reload &7Reload configuration."));
-        sender.sendMessage(MessageUtil.color("&8- &b/sa version &7Show plugin version."));
-        sender.sendMessage(MessageUtil.color("&8- &b/sa evidence <player> &7Prepared investigation summary command."));
+        sender.sendMessage(MessageUtil.color("&8- &b/si profile <player> &7View risk score and recent signals."));
+        sender.sendMessage(MessageUtil.color("&8- &b/si timeline <player> &7View recent investigation timeline."));
+        sender.sendMessage(MessageUtil.color("&8- &b/si watch <player> &7Toggle live watch mode."));
+        sender.sendMessage(MessageUtil.color("&8- &b/si alerts &7Toggle personal staff alerts."));
+        sender.sendMessage(MessageUtil.color("&8- &b/si reload &7Reload configuration."));
+        sender.sendMessage(MessageUtil.color("&8- &b/si version &7Show plugin version."));
+        sender.sendMessage(MessageUtil.color("&8- &b/si evidence <player> &7Prepared investigation summary command."));
         return true;
     }
 
@@ -89,7 +89,7 @@ public final class ServerIntelCommand implements CommandExecutor, TabCompleter {
             return true;
         }
         if (args.length < 2) {
-            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /sa profile <player>");
+            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /si profile <player>");
             return true;
         }
         Optional<PlayerProfile> optionalProfile = findProfile(args[1]);
@@ -128,7 +128,7 @@ public final class ServerIntelCommand implements CommandExecutor, TabCompleter {
             return true;
         }
         if (args.length < 2) {
-            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /sa timeline <player>");
+            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /si timeline <player>");
             return true;
         }
         Optional<PlayerProfile> optionalProfile = findProfile(args[1]);
@@ -170,7 +170,7 @@ public final class ServerIntelCommand implements CommandExecutor, TabCompleter {
             return true;
         }
         if (args.length < 2) {
-            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /sa watch <player>");
+            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /si watch <player>");
             return true;
         }
         Optional<PlayerProfile> optionalProfile = findProfile(args[1]);
@@ -233,7 +233,7 @@ public final class ServerIntelCommand implements CommandExecutor, TabCompleter {
             return true;
         }
         if (args.length < 2) {
-            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /sa evidence <player>");
+            MessageUtil.send(sender, config.get().prefix(), "&cUsage: /si evidence <player>");
             return true;
         }
         Optional<PlayerProfile> optionalProfile = findProfile(args[1]);
@@ -244,7 +244,7 @@ public final class ServerIntelCommand implements CommandExecutor, TabCompleter {
         PlayerProfile profile = optionalProfile.get();
         MessageUtil.send(sender, config.get().prefix(), "&bEvidence summary for &f" + profile.name());
         sender.sendMessage(MessageUtil.color("&7This command is prepared for a future report generator."));
-        sender.sendMessage(MessageUtil.color("&7For now, use &b/sa profile " + profile.name() + " &7and &b/sa timeline " + profile.name() + "&7."));
+        sender.sendMessage(MessageUtil.color("&7For now, use &b/si profile " + profile.name() + " &7and &b/si timeline " + profile.name() + "&7."));
         return true;
     }
 

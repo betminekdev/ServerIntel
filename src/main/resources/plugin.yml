@@ -7,10 +7,10 @@ description: Smart staff assistant for Minecraft servers.
 libraries:
   - org.xerial:sqlite-jdbc:3.53.1.0
 commands:
-  smartadmin:
+  serverintel:
     description: Main ServerIntel staff assistant command
-    aliases: [sa]
-    usage: /smartadmin help
+    aliases: [si, smartadmin, sa]
+    usage: /serverintel help
 permissions:
   serverintel.admin:
     description: Full access to ServerIntel.

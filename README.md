@@ -1,4 +1,12 @@
+![ServerIntel banner](assets/banner.svg)
+
 # ServerIntel
+
+[![Build](https://github.com/betminekdev/ServerIntel/actions/workflows/build.yml/badge.svg)](https://github.com/betminekdev/ServerIntel/actions/workflows/build.yml)
+![Java 21](https://img.shields.io/badge/Java-21-blue)
+![Paper/Spigot](https://img.shields.io/badge/Paper%2FSpigot-1.21.x-38bdf8)
+![Version](https://img.shields.io/badge/version-0.1.0--beta-f59e0b)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 Smart staff assistant for Minecraft servers.
 
@@ -6,12 +14,14 @@ Smart staff assistant for Minecraft servers.
 
 ServerIntel helps staff teams understand suspicious player behavior using risk scores, player timelines, smart alerts, and investigation-focused data.
 
-ServerIntel is not a classic anti-cheat and does not replace human moderation. It provides server-side signals and evidence to help staff make better decisions. It does not automatically ban players and it does not claim guaranteed cheat detection.
+> **Beta warning:** ServerIntel `v0.1.0-beta` is an early public beta. Test it on a staging server first and tune thresholds for your community.
+
+ServerIntel is not a classic anti-cheat and does not replace human moderation. It provides server-side signals and evidence timelines to help staff make better decisions. It does not auto-ban players and it does not claim guaranteed cheat detection.
 
 ## Features
 
-- Player risk score from 0 to 100.
-- Clear risk levels: SAFE, WATCH, SUSPICIOUS, HIGH_RISK.
+- Player risk score from `0` to `100`.
+- Clear risk levels: `SAFE`, `WATCH`, `SUSPICIOUS`, `HIGH_RISK`.
 - Persistent player timeline with important actions.
 - Suspicious mining signals for valuable ores and ore bursts.
 - Staff alerts with cooldowns.
@@ -21,21 +31,42 @@ ServerIntel is not a classic anti-cheat and does not replace human moderation. I
 - Permission-based command access.
 - Prepared architecture for future evidence reports.
 
+## Preview
+
+| Profile | Timeline |
+| --- | --- |
+| ![Profile preview](assets/preview-profile.svg) | ![Timeline preview](assets/preview-timeline.svg) |
+
+| Alert | Watch |
+| --- | --- |
+| ![Alert preview](assets/preview-alert.svg) | ![Watch preview](assets/preview-watch.svg) |
+
+## Installation
+
+1. Download `ServerIntel-0.1.0-beta.jar` from the GitHub release.
+2. Put the JAR into your server `plugins` folder.
+3. Start the server.
+4. Edit `plugins/ServerIntel/config.yml` if needed.
+5. Run `/si reload` after configuration changes.
+
 ## Commands
 
-Main command: `/smartadmin`  
-Alias: `/sa`
+Main command: `/serverintel`  
+Preferred command: `/si`  
+Aliases: `/si`, `/smartadmin`, `/sa`
 
 | Command | Description |
 | --- | --- |
-| `/sa help` | Shows ServerIntel commands. |
-| `/sa profile <player>` | Shows player risk score, status, and recent signals. |
-| `/sa timeline <player>` | Shows recent important actions. |
-| `/sa watch <player>` | Toggles live watch mode for the sender. |
-| `/sa alerts` | Toggles personal staff alerts. |
-| `/sa reload` | Reloads configuration. |
-| `/sa version` | Shows plugin version. |
-| `/sa evidence <player>` | Prepared placeholder for future investigation summaries. |
+| `/si help` | Shows ServerIntel commands. |
+| `/si profile <player>` | Shows player risk score, status, and recent signals. |
+| `/si timeline <player>` | Shows recent important actions. |
+| `/si watch <player>` | Toggles live watch mode for the sender. |
+| `/si alerts` | Toggles personal staff alerts. |
+| `/si reload` | Reloads configuration. |
+| `/si version` | Shows plugin version. |
+| `/si evidence <player>` | Prepared placeholder for future investigation summaries. |
+
+More detail: [docs/commands.md](docs/commands.md)
 
 ## Permissions
 
@@ -47,15 +78,9 @@ Alias: `/sa`
 | `serverintel.alerts` | Can receive staff alerts. | op |
 | `serverintel.bypass` | Excludes a player from risk scoring unless configured otherwise. | false |
 
-## Installation
+More detail: [docs/permissions.md](docs/permissions.md)
 
-1. Build the plugin with `.\gradlew.bat clean test build`.
-2. Copy `build/libs/ServerIntel-0.1.0-beta.jar` into your server `plugins` folder.
-3. Start the server.
-4. Edit `plugins/ServerIntel/config.yml` if needed.
-5. Run `/sa reload` after configuration changes.
-
-## Configuration Example
+## Configuration Preview
 
 ```yaml
 risk:
@@ -84,28 +109,37 @@ alerts:
   threshold: 60
   high-risk-threshold: 80
   cooldown-seconds: 30
-
-storage:
-  type: sqlite
-  database-file: "plugins/ServerIntel/serverintel.db"
-  keep-data-days: 14
 ```
 
-## Manual Test Plan
+More detail: [docs/configuration.md](docs/configuration.md)
 
-- Start a Paper/Spigot server with the plugin installed.
-- Confirm `plugins/ServerIntel/config.yml` is created.
-- Confirm `plugins/ServerIntel/serverintel.db` is created after startup.
-- Join with a player.
-- Mine valuable ores such as diamond ore or ancient debris.
-- Run `/sa profile <player>`.
-- Run `/sa timeline <player>`.
-- Toggle `/sa alerts`.
-- Toggle `/sa watch <player>`.
-- Test `/sa reload`.
-- Mine enough configured ores to cross the alert threshold and confirm staff alerts respect cooldowns.
+## Risk Levels
 
-## Known Limitations
+| Score | Level | Meaning |
+| --- | --- | --- |
+| `0-25` | `SAFE` | No major current concern. |
+| `26-50` | `WATCH` | Worth keeping an eye on. |
+| `51-75` | `SUSPICIOUS` | Review timeline and watch manually. |
+| `76-100` | `HIGH_RISK` | Strong review priority, still not proof. |
+
+## Example Alert
+
+```text
+[ServerIntel] PlayerName reached Risk 64/100.
+Reason: High-value ore burst detected.
+Actions: /si profile PlayerName | /si timeline PlayerName | /si watch PlayerName
+```
+
+## Example Timeline
+
+```text
+[18:02] Joined server
+[18:06] Broke DEEPSLATE_DIAMOND_ORE at world - X:120 Y:-54 Z:300 (+3 risk)
+[18:10] High ore burst detected: 11 diamond ores in 10 minutes (+15 risk)
+[18:15] Risk changed to 68 - Status: SUSPICIOUS
+```
+
+## Limitations
 
 - ServerIntel does not detect cheat clients.
 - ServerIntel does not provide 100% xray detection.
@@ -113,7 +147,21 @@ storage:
 - ServerIntel does not auto-punish players.
 - Risk scores are investigation signals, not proof.
 - Watch mode is in-memory and resets on restart.
-- SQLite writes are simple and synchronous in v0.1; the storage layer is designed so this can be improved later.
+- SQLite writes are simple and synchronous in v0.1.
+
+More detail: [docs/detection.md](docs/detection.md)
+
+## Build
+
+```powershell
+.\gradlew.bat clean build --console plain
+```
+
+The JAR is created at:
+
+```text
+build/libs/ServerIntel-0.1.0-beta.jar
+```
 
 ## Roadmap
 
