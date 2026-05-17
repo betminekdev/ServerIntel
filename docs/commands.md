@@ -1,49 +1,30 @@
 # Commands
 
-SmartAdmin uses `/smartadmin` as the main command. The preferred short command is `/sa`.
+SmartAdmin uses `/smartadmin` as the main command. Staff-facing examples use the shorter `/sa` alias.
 
 Aliases: `/sa`, `/si`
 
-## `/sa help`
+| Command | Permission | Purpose |
+| --- | --- | --- |
+| `/sa help` | `smartadmin.staff` or `smartadmin.admin` | Show available commands. |
+| `/sa profile <player>` | `smartadmin.staff` or `smartadmin.admin` | Review risk score, risk level, last seen time, and recent signals. |
+| `/sa timeline <player>` | `smartadmin.staff` or `smartadmin.admin` | Review recent important events for a player. |
+| `/sa watch <player>` | `smartadmin.staff` or `smartadmin.admin` | Toggle live watch messages for one player. |
+| `/sa alerts` | `smartadmin.alerts`, `smartadmin.staff`, or `smartadmin.admin` | Toggle personal alert delivery. |
+| `/sa reload` | `smartadmin.reload` or `smartadmin.admin` | Reload configuration. |
+| `/sa version` | `smartadmin.staff` or `smartadmin.admin` | Show the installed plugin version. |
+| `/sa evidence <player>` | `smartadmin.staff` or `smartadmin.admin` | Placeholder for future evidence reports. |
 
-Shows the available SmartAdmin commands.
+## Usage Notes
 
-## `/sa profile <player>`
+Use `/sa profile <player>` for a quick summary before taking action.
 
-Shows a player's current risk score, risk level, last seen time, and recent important signals.
+Use `/sa timeline <player>` when staff need context around the score. Timeline entries can include joins, ore mining, ore burst signals, block placement signals, chat signals, and risk level changes.
 
-Use this when staff need a quick overview before deciding whether to watch a player manually.
+Use `/sa watch <player>` during manual investigation. Watch mode is in-memory and resets when the server restarts.
 
-## `/sa timeline <player>`
+Use `/sa reload` after changing normal thresholds or message settings. Restart the server after changing storage paths.
 
-Shows recent timeline events for a player.
+## Evidence Placeholder
 
-Timeline entries can include joins, valuable ore mining, ore burst signals, block placement signals, chat signals, and risk level changes.
-
-## `/sa watch <player>`
-
-Toggles live watch mode for the command sender.
-
-When enabled, the staff member receives important live events from the watched player. Watch mode is in-memory and resets after restart.
-
-## `/sa alerts`
-
-Toggles personal staff alerts.
-
-This affects whether the sender receives SmartAdmin alerts when players cross configured thresholds.
-
-## `/sa reload`
-
-Reloads `config.yml` without restarting the server.
-
-Storage settings are not reconnected during reload in v0.1. Restart the server after changing the database path.
-
-## `/sa version`
-
-Shows the installed SmartAdmin version.
-
-## `/sa evidence <player>`
-
-Prepared placeholder for future investigation reports.
-
-In v0.1, use `/sa profile <player>` and `/sa timeline <player>` for investigation data.
+`/sa evidence <player>` is reserved for future investigation reports. In `v0.1.0-beta`, use profile and timeline commands for review data.

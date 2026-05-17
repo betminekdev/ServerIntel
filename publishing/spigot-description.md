@@ -1,11 +1,11 @@
 [CENTER][B]SmartAdmin[/B][/CENTER]
 [CENTER]Smart staff assistant for Minecraft servers.[/CENTER]
 
-[B]Stop guessing. Start investigating.[/B]
+[CENTER][B]Stop guessing. Start investigating.[/B][/CENTER]
 
-SmartAdmin helps staff teams investigate suspicious player behavior using risk scores, player timelines, staff alerts, and watch mode.
+SmartAdmin helps staff teams review suspicious player behavior using risk scores, player timelines, staff alerts, and watch mode.
 
-This plugin is [B]not[/B] a classic anti-cheat. It does not auto-ban players and it does not claim perfect cheat detection. It provides server-side signals and evidence timelines so staff can review behavior faster.
+[B]Important:[/B] SmartAdmin is not a classic anti-cheat. It does not auto-ban players and does not claim perfect cheat detection. It provides server-side signals for manual staff review.
 
 [B]Features[/B]
 [LIST]
@@ -30,11 +30,14 @@ This plugin is [B]not[/B] a classic anti-cheat. It does not auto-ban players and
 [*]/sa version
 [/LIST]
 
+Main command: [B]/smartadmin[/B]
+Aliases: [B]/sa[/B], [B]/si[/B]
+
 [B]Beta Warning[/B]
 
 SmartAdmin v0.1.0-beta is an early public beta. Test it on a staging server first and tune the configuration for your community.
 
-[B]Important[/B]
+[B]Moderation Note[/B]
 
 Risk scores are investigation signals, not proof. Staff should always review context before taking action.
 

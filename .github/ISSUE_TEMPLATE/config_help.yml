@@ -1,0 +1,41 @@
+name: Configuration help
+description: Ask for help tuning SmartAdmin safely.
+title: "[Config]: "
+labels: ["configuration"]
+body:
+  - type: input
+    id: smartadmin-version
+    attributes:
+      label: SmartAdmin version
+      placeholder: "0.1.0-beta"
+    validations:
+      required: true
+  - type: input
+    id: server-type
+    attributes:
+      label: Server type
+      placeholder: "Survival, SMP, factions, anarchy, skyblock..."
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to tune?
+      placeholder: "Mining alerts, alert threshold, decay, bypass behavior..."
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant config
+      description: Paste relevant sections only. Remove private data.
+      render: yaml
+    validations:
+      required: true
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: What is happening?
+      placeholder: "Too many alerts, no alerts, risk too high, risk too low..."
+    validations:
+      required: true

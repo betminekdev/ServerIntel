@@ -2,7 +2,9 @@
 
 Smart staff assistant for Minecraft servers.
 
-SmartAdmin helps staff teams understand suspicious player behavior using risk scores, player timelines, smart alerts, and watch mode.
+**Stop guessing. Start investigating.**
+
+SmartAdmin helps staff teams review suspicious player behavior using risk scores, player timelines, staff alerts, and watch mode.
 
 ## Honest Positioning
 

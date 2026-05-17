@@ -12,24 +12,23 @@ Smart staff assistant for Minecraft servers.
 
 **Stop guessing. Start investigating.**
 
-SmartAdmin helps staff teams understand suspicious player behavior using risk scores, player timelines, smart alerts, and investigation-focused data.
+SmartAdmin helps staff teams review suspicious player behavior with risk scores, player timelines, staff alerts, and watch mode.
 
 > **Beta warning:** SmartAdmin `v0.1.0-beta` is an early public beta. Test it on a staging server first and tune thresholds for your community.
 
-SmartAdmin is not a classic anti-cheat and does not replace human moderation. It provides server-side signals and evidence timelines to help staff make better decisions. It does not auto-ban players and it does not claim guaranteed cheat detection.
+SmartAdmin is not a classic anti-cheat and does not replace human moderation. It provides server-side signals and timeline data for staff review. It does not auto-ban players and it does not claim guaranteed cheat detection.
 
 ## Features
 
-- Player risk score from `0` to `100`.
-- Clear risk levels: `SAFE`, `WATCH`, `SUSPICIOUS`, `HIGH_RISK`.
-- Persistent player timeline with important actions.
-- Suspicious mining signals for valuable ores and ore bursts.
-- Staff alerts with cooldowns.
-- In-memory watch mode for live staff investigation.
-- SQLite storage.
-- Configurable risk values, thresholds, and decay.
-- Permission-based command access.
-- Prepared architecture for future evidence reports.
+- Player risk score from `0` to `100`
+- Risk levels: `SAFE`, `WATCH`, `SUSPICIOUS`, `HIGH_RISK`
+- Player timeline with important actions
+- Mining signals for valuable ores and ore bursts
+- Staff alerts with cooldowns
+- In-memory watch mode for live investigation
+- SQLite storage
+- Configurable risk values, thresholds, and decay
+- Permission-based command access
 
 ## Preview
 
@@ -44,41 +43,43 @@ SmartAdmin is not a classic anti-cheat and does not replace human moderation. It
 ## Installation
 
 1. Download `SmartAdmin-0.1.0-beta.jar` from the GitHub release.
-2. Put the JAR into your server `plugins` folder.
-3. Start the server.
-4. Edit `plugins/SmartAdmin/config.yml` if needed.
-5. Run `/sa reload` after configuration changes.
+2. Stop your server.
+3. Place the JAR in the server `plugins` folder.
+4. Start the server.
+5. Confirm `plugins/SmartAdmin/config.yml` and `plugins/SmartAdmin/smartadmin.db` were created.
+6. Edit `plugins/SmartAdmin/config.yml` if needed.
+7. Run `/sa reload` after safe config changes, or restart after changing storage settings.
 
 ## Commands
 
 Main command: `/smartadmin`  
-Preferred command: `/sa`  
-Optional alias: `/si`
+Preferred short command: `/sa`  
+Additional alias: `/si`
 
 | Command | Description |
 | --- | --- |
 | `/sa help` | Shows SmartAdmin commands. |
-| `/sa profile <player>` | Shows player risk score, status, and recent signals. |
-| `/sa timeline <player>` | Shows recent important actions. |
+| `/sa profile <player>` | Shows risk score, status, and recent signals. |
+| `/sa timeline <player>` | Shows recent timeline events. |
 | `/sa watch <player>` | Toggles live watch mode for the sender. |
 | `/sa alerts` | Toggles personal staff alerts. |
 | `/sa reload` | Reloads configuration. |
 | `/sa version` | Shows plugin version. |
-| `/sa evidence <player>` | Prepared placeholder for future investigation summaries. |
+| `/sa evidence <player>` | Placeholder for future investigation reports. |
 
-More detail: [docs/commands.md](docs/commands.md)
+See [docs/commands.md](docs/commands.md) for details.
 
 ## Permissions
 
-| Permission | Description | Default |
+| Permission | Default | Purpose |
 | --- | --- | --- |
-| `smartadmin.admin` | Full access. | op |
-| `smartadmin.staff` | Can use profile, timeline, watch, and alerts. | op |
-| `smartadmin.reload` | Can reload config. | op |
-| `smartadmin.alerts` | Can receive staff alerts. | op |
-| `smartadmin.bypass` | Excludes a player from risk scoring unless configured otherwise. | false |
+| `smartadmin.admin` | `op` | Full access to SmartAdmin. |
+| `smartadmin.staff` | `op` | Access to profile, timeline, watch, alerts, help, version, and evidence placeholder. |
+| `smartadmin.reload` | `op` | Access to `/sa reload`. |
+| `smartadmin.alerts` | `op` | Allows receiving SmartAdmin alerts. |
+| `smartadmin.bypass` | `false` | Excludes a player from risk scoring unless configured otherwise. |
 
-More detail: [docs/permissions.md](docs/permissions.md)
+See [docs/permissions.md](docs/permissions.md) for setup guidance.
 
 ## Configuration Preview
 
@@ -95,8 +96,6 @@ mining:
     DIAMOND_ORE: 3
     DEEPSLATE_DIAMOND_ORE: 3
     ANCIENT_DEBRIS: 5
-    EMERALD_ORE: 2
-    DEEPSLATE_EMERALD_ORE: 2
   burst-detection:
     enabled: true
     time-window-minutes: 10
@@ -111,7 +110,7 @@ alerts:
   cooldown-seconds: 30
 ```
 
-More detail: [docs/configuration.md](docs/configuration.md)
+See [docs/configuration.md](docs/configuration.md) before tuning thresholds.
 
 ## Risk Levels
 
@@ -142,19 +141,27 @@ Actions: /sa profile PlayerName | /sa timeline PlayerName | /sa watch PlayerName
 ## Limitations
 
 - SmartAdmin does not detect cheat clients.
-- SmartAdmin does not provide 100% xray detection.
+- SmartAdmin does not provide perfect xray detection.
 - SmartAdmin does not inspect screenshots or client-side state.
 - SmartAdmin does not auto-punish players.
 - Risk scores are investigation signals, not proof.
 - Watch mode is in-memory and resets on restart.
-- SQLite writes are simple and synchronous in v0.1.
+- SQLite storage is the only storage backend in `v0.1.0-beta`.
 
-More detail: [docs/detection.md](docs/detection.md)
+See [docs/detection.md](docs/detection.md) for detection philosophy.
 
 ## Build
 
+Windows:
+
 ```powershell
 .\gradlew.bat clean build --console plain
+```
+
+Linux/macOS:
+
+```bash
+./gradlew clean build --console plain
 ```
 
 The JAR is created at:
@@ -165,18 +172,18 @@ build/libs/SmartAdmin-0.1.0-beta.jar
 
 ## Roadmap
 
-- Discord webhook alerts.
-- Full evidence report generation.
-- Inventory GUI.
-- Web dashboard.
-- More detectors.
-- Chat risk detector improvements.
-- Grief detector.
-- Claim plugin integration.
-- LuckPerms integration.
-- PlaceholderAPI support.
-- Export reports to JSON or text.
-- Admin notes per player.
+- Discord webhook alerts
+- Evidence report generation
+- Inventory GUI
+- Web dashboard
+- More detectors
+- Chat risk detector improvements
+- Grief detector
+- Claim plugin integration
+- LuckPerms integration
+- PlaceholderAPI support
+- Export reports to JSON or text
+- Admin notes per player
 
 ## Links
 

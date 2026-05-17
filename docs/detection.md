@@ -24,17 +24,19 @@ It collects server-side signals, creates timelines, calculates risk scores, and 
 
 The MVP mining detector watches valuable ore mining:
 
-- diamond ore
-- deepslate diamond ore
-- emerald ore
-- deepslate emerald ore
-- ancient debris
-- gold ore
-- deepslate gold ore
-- iron ore
-- deepslate iron ore
+| Ore | Purpose |
+| --- | --- |
+| `DIAMOND_ORE` | Valuable ore signal. |
+| `DEEPSLATE_DIAMOND_ORE` | Valuable ore signal. |
+| `EMERALD_ORE` | Valuable ore signal. |
+| `DEEPSLATE_EMERALD_ORE` | Valuable ore signal. |
+| `ANCIENT_DEBRIS` | Netherite-related signal. |
+| `GOLD_ORE` | Lower-value mining signal. |
+| `DEEPSLATE_GOLD_ORE` | Lower-value mining signal. |
+| `IRON_ORE` | Lower-value mining signal. |
+| `DEEPSLATE_IRON_ORE` | Lower-value mining signal. |
 
-It can add risk for valuable ores, high-value ore bursts, ancient debris bursts, and unusual new-player mining activity.
+SmartAdmin can add risk for valuable ores, high-value ore bursts, ancient debris bursts, and unusual new-player mining activity.
 
 These signals are useful starting points for staff review. They should be combined with timeline context, server rules, player history, and manual observation.
 
@@ -42,7 +44,7 @@ These signals are useful starting points for staff review. They should be combin
 
 | Score | Level | Meaning |
 | --- | --- | --- |
-| 0-25 | SAFE | No major current concern. |
-| 26-50 | WATCH | Worth keeping an eye on. |
-| 51-75 | SUSPICIOUS | Review timeline and watch manually. |
-| 76-100 | HIGH_RISK | Strong review priority, still not proof. |
+| `0-25` | `SAFE` | No major current concern. |
+| `26-50` | `WATCH` | Worth keeping an eye on. |
+| `51-75` | `SUSPICIOUS` | Review timeline and watch manually. |
+| `76-100` | `HIGH_RISK` | Strong review priority, still not proof. |

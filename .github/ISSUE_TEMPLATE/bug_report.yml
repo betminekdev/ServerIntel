@@ -1,0 +1,75 @@
+name: Bug report
+description: Report a reproducible SmartAdmin problem.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a SmartAdmin issue. Please include enough server context for maintainers to reproduce it.
+  - type: input
+    id: smartadmin-version
+    attributes:
+      label: SmartAdmin version
+      placeholder: "0.1.0-beta"
+    validations:
+      required: true
+  - type: input
+    id: server-software
+    attributes:
+      label: Paper/Spigot version
+      placeholder: "Paper 1.21.x build ..."
+    validations:
+      required: true
+  - type: input
+    id: java-version
+    attributes:
+      label: Java version
+      placeholder: "Java 21"
+    validations:
+      required: true
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft server version
+      placeholder: "1.21.x"
+    validations:
+      required: true
+  - type: textarea
+    id: error-log
+    attributes:
+      label: Error log
+      description: Paste the relevant console error or stack trace.
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start server with SmartAdmin...
+        2. Run /sa ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Config if relevant
+      description: Paste only relevant config sections. Remove secrets or private URLs.
+      render: yaml
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

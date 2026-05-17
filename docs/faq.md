@@ -6,7 +6,7 @@ No. SmartAdmin is a smart staff assistant. It provides investigation signals and
 
 ## Does SmartAdmin auto-ban players?
 
-No. SmartAdmin does not auto-ban in v0.1 and does not recommend punishing without review.
+No. SmartAdmin does not auto-ban in `v0.1.0-beta` and does not recommend punishing without review.
 
 ## Can it detect xray perfectly?
 
@@ -20,13 +20,17 @@ No. SmartAdmin uses server-side data only.
 
 SmartAdmin is built for Paper/Spigot-style Java servers and compiles against Paper API `1.21.11-R0.1-SNAPSHOT`.
 
+## What Java version should I use?
+
+Use Java 21 for Paper 1.21.x servers.
+
 ## What database does it use?
 
 SQLite. The default file is `plugins/SmartAdmin/smartadmin.db`.
 
 ## Which command should staff use?
 
-Use `/sa`. The full command is `/smartadmin`, and legacy-friendly aliases `/sa` and `/si` are also registered.
+Use `/sa` for daily staff work. The full command is `/smartadmin`, and `/si` is also registered as an alias.
 
 ## Is v0.1.0-beta production ready?
 

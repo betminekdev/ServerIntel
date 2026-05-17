@@ -1,0 +1,39 @@
+name: Feature request
+description: Suggest a focused SmartAdmin improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        SmartAdmin is a staff assistant, not an auto-ban anti-cheat. Please keep requests focused on investigation, alerts, timelines, configuration, or moderation workflow.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or workflow
+      description: What staff workflow would this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior you want.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Mention simpler config changes or workflow changes you tried.
+    validations:
+      required: false
+  - type: checkboxes
+    id: positioning
+    attributes:
+      label: Positioning check
+      options:
+        - label: This request does not require automatic punishments.
+          required: true
+        - label: This request does not claim guaranteed cheat detection.
+          required: true
